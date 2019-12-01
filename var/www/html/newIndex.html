@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1> Ashwin Banwari </h1>
+
+<p> :( </p>
+
+<div>Button:
+	<input type="button" value="Press Me" id="b1" />
+	<script>
+		$(document).ready(function(){
+			$("#b1").clickfunction(){
+				$.ajax({
+					method: "GET",
+					url: "192.168.1.144/button.py",
+					data: {"place":value},
+					dataType: "text",
+					success:function(result){
+						var data=JSON.parse(result);
+						console.log(result);
+					}
+				});
+			});
+		});
+	</script>
+		
+</div>
+
+
+</body>
+</html>
